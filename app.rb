@@ -1,10 +1,10 @@
 #encoding: utf-8
-require 'rubygems'
-require 'sinatra'
-require 'sinatra/reloader'
-require 'sinatra/activerecord'
+require "rubygems"
+require "sinatra"
+require "sinatra/reloader"
+require "sinatra/activerecord"  
 
-set :database, "sqlite3:barbershop.db"
+set :database, {adapter: "sqlite3", database: "foo.sqlite3"}
 
 class Client < ActiveRecord::Base
 
